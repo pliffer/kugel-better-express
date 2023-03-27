@@ -29,6 +29,9 @@ Components.get('routerMethods').add((router, routerMethods, moduleExports, app) 
                 // Executa os middlewares
                 for(let f of middle) await f(req, res, next);
 
+                // @todo Remove render when there's no template engine
+                // @todo Remove files when there's no file upload
+
                 let result = await last({
                     body: req.body,
                     query: req.query,
