@@ -31,7 +31,7 @@ Pode-se definir o status da resposta desconstruindo o res, da seguinte maneira:
 let betterExpress = require('kugel-better-express');
 
 betterExpress.router(router => {
-    router.get('/:id', ({params, res}) => {
+    router.get('/:id', ({res, req}) => {
 	
 		if(!req.headers['not-human']){
 			res.status(500);
