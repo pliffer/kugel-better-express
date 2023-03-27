@@ -1,10 +1,10 @@
-const fileUpload = require('express-fileupload')
-const express    = require('express')
-const path       = require('path')
-const fs         = require('fs-extra')
-const cors       = require('cors')
+const fileUpload = require('express-fileupload');
+const express    = require('express');
+const path       = require('path');
+const fs         = require('fs-extra');
+const cors       = require('cors');
 
-const Components = require('../../../kugel-components')
+const Components = require('kugel-components');
 
 let expressMiddleware = Components.get('express-middleware');
 
@@ -32,13 +32,13 @@ module.exports = {
             let routerFunctions = {};
 
             Components.get('routerMethods').stack.forEach(subMethod => {
-    
+
                 subMethod(router, routerFunctions, module.exports, app);
     
             });
     
             toRoute(routerFunctions);
-    
+
             // Caso a rota esteja prefixada
             if(prefix){
 

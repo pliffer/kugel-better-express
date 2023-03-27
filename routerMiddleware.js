@@ -1,5 +1,4 @@
-// @dev
-const Components = require(process.env.ROOT + '/../kugel-components');
+const Components = require('kugel-components');
 
 // Metodos que esse manipulador de rotas suporta
 let methods = ['get', 'post', 'put', 'patch', 'delete'];
@@ -30,12 +29,7 @@ Components.get('routerMethods').add((router, routerMethods, moduleExports, app) 
                 // Executa os middlewares
                 for(let f of middle) await f(req, res, next);
 
-                // Obtém os dados do corpo da solicitação ou da query
-                // @todo Verificar quando um post possui parâmetros na query
-                let data = req.body || req.query;
-
                 let result = await last({
-                    data,
                     body: req.body,
                     query: req.query,
                     params: req.params,
