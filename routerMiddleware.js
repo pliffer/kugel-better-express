@@ -1,10 +1,12 @@
-const Components = require('kugel-components');
+const kugel = require('kugel');
+
+console.log(kugel);
 
 // Metodos que esse manipulador de rotas suporta
 let methods = ['get', 'post', 'put', 'patch', 'delete'];
 
 // Cria um manipulador de rotas personalizado
-Components.get('routerMethods').add((router, routerMethods, moduleExports, app) => {
+kugel.Component.get('routerMethods').add((router, routerMethods, moduleExports, app) => {
 
     app.locals.basedir = process.env.ROOT;
 

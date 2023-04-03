@@ -1,6 +1,6 @@
 # Kugel Better Express
 
-Pacote do kugel, para extender o express no intuito que haja mais padronização no tratamento de erros, retorno REST, upload de arquivos, autenticação e outras configurações.
+ Pacote do kugel, para extender o express no intuito que haja mais padronização no tratamento de erros, retorno REST, upload de arquivos, autenticação e outras configurações.
 
 Para sua ativação, é necessário que "kugel-better-express" esteja dentro de alguma das propriedades de inicalização dentro do .kugel do package.json.  
 
@@ -15,7 +15,7 @@ betterExpress.router(router => {
 });
 
 ```
-A função router, retorna um router, instância do express que está rodando no atual processo. Esse router já tem abstraído todas as funções, portanto no caso do módulo `kugel-jwt` estar ativado, o método router.jwt.get e outros estarão também disponíveis.
+A funão router, retorna um router, instância do express que está rodando no atual processo. Esse router já tem abstraído todas as funções, portanto no caso do módulo `kugel-jwt` estar ativado, o método router.jwt.get e outros estarão também disponíveis.
 
 Recomenda-se o desconstrutor para obter a função que será utilizada na rota, assim como pode-se também simplesmente pegar o objeto inteiro, que possui as seguintes propriedades: `{body, query, params, files, render, req, res}`.
 
