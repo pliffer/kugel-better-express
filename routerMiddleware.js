@@ -1,7 +1,5 @@
 const kugel = require('kugel');
 
-console.log(kugel);
-
 // Metodos que esse manipulador de rotas suporta
 let methods = ['get', 'post', 'put', 'patch', 'delete'];
 
