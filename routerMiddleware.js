@@ -47,7 +47,8 @@ kugel.Component.get('routerMethods').add((router, routerMethods, moduleExports, 
 
                     },
                     req,
-                    res
+                    res,
+                    next
                 });
 
                 if(!result) return;
