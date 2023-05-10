@@ -10,9 +10,13 @@ const Component = kugel.Component;
 
 let expressMiddleware = Component.get('express-middleware');
 
-// console.log(expressMiddleware, process.env['kugel-Component'])
+let config = require(process.cwd() + '/package.json').kugel?.config;
 
-let config = require(process.env.ROOT + '/package.json').kugel.config;
+if(!config){
+
+    return console.log('Kugel: Fatal error');
+
+}
 
 let router = new express.Router();
 
